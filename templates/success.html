@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success!!</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+    <h1>Patient is registered successfully!!</h1>
+    <hr>
+
+    <div class="diseaselist">
+        <ol style="list-style: none!important;">
+
+            <!-- Cancer (Not wired yet) -->
+            <li>
+                <form method="GET" action="#">
+                    <button type="submit" id="btn1">Cancer</button>
+                </form>
+            </li><br>
+
+            <!-- Diabetics -->
+            <li>
+                <form method="GET" action="{% url 'diabetics' %}">
+                    {% csrf_token %}
+                    <button type="submit" id="btn1">Diabetics</button>
+                </form>
+            </li><br>
+
+            <!-- Stroke (Not wired yet) -->
+            <li>
+                <form method="GET" action="#">
+                    <button type="submit" id="btn1">Stroke</button>
+                </form>
+            </li><br>
+
+            <!-- Cardiac Arrest -->
+            <li>
+                <form method="GET" action="{% url 'cardiac' %}">
+                    {% csrf_token %}
+                    <button type="submit" id="btn1">Cardiac Arrest</button>
+                </form>
+            </li><br>
+
+            <!-- Covid (Not wired yet) -->
+            <li>
+                <form method="GET" action="{% url 'anemia' %}">
+                    <button type="submit" id="btn1">Anemia</button>
+                </form>
+            </li><br>
+
+        </ol>
+    </div>
+
+    <hr>
+</body>
+</html>

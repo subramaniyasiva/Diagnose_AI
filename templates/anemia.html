@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+    <head>
+        <title>Anemia Testing</title>
+        <link rel="stylesheet" href="{% static 'diabetics.css' %}">
+    </head>
+    <body>
+        <h1>Anemia Testing</h1>
+        <hr>
+        <form method='POST'>
+            {% csrf_token %}
+            <label>Patient Name :</label>
+            <input type="text" name="pname1"><br><br>
+            <label>Gender: </label>
+            <select name="gender">
+                <option value=1>Male</option>
+                <option value=0>Female</option>
+            </select>
+            <label>Hemoglobin :</label>
+            <input type="decimal" name="hemo"><br><br>
+            <label>MCH:</label>
+            <input type="decimal" name="mch"><br><br>
+            <label>MCHC : </label>
+            <input type="decimal" name="mchc"><br><br>
+            <label>MCV : </label>
+            <input type="decimal" name="mcv"><br><br>
+            <input type="submit" id="btn1" value="Check For Diabetic">
+        </form>
+        {% if anemia_result %}
+        <script>
+            alert("{{anemia_result}}")
+        </script>
+        {% endif %}
+        
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+    </html>

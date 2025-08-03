@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(255, 255, 255);
+    
+}
+form{
+    padding:0.8%;
+     
+   
+    padding: 1%;
+    border-radius: 4px;
+  
+    background-color: rgb(185, 204, 243);}
+#btn1{
+    padding:0.8%;
+    
+    border-radius: 2px;
+    background-color: rgb(141, 80, 255);;
+}

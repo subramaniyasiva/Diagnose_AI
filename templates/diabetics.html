@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+    <head>
+        <title>Diabetic Testing</title>
+        <link rel="stylesheet" href="{% static 'diabetics.css' %}">
+    </head>
+    <body>
+        <h1>Diabetic Testing</h1>
+        <hr>
+        <form method='POST'>
+            {% csrf_token %}
+            <label>Patient Name :</label>
+            <input type="text" name="pname1"><br><br>
+            <label>Age :</label>
+            <input type="number" name="age"><br><br>
+            <label>Pregnancies :</label>
+            <input type="Number" name="pregnancies"><br><br>
+            <label>Glucose :</label>
+            <input type="Number" name="glucose"><br><br>
+            <label>Blood Pressure :</label>
+            <input type="number" name="bp"><br><br>
+            <label>Skin Thickness : </label>
+            <input type="number" name="skinthickness"><br><BR>
+            <label>Insulin :</label>
+            <input type="number" name="insulin"><br><br>
+            <label>BMI :</label>
+            <input type="decimal" name="bmi"><br><br>
+            <label>Diabetic Pedigree Function :</label>
+            <input type="decimal" name="dpf"><br><br>   
+            <input type="submit" id="btn1" value="Check For Diabetic">
+        </form>
+        {% if dia_result %}
+        <script>
+            alert("{{dia_result}}")
+        </script>
+        {% endif %}
+        
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+    </html>

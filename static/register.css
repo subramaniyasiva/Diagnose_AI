@@ -1,0 +1,17 @@
+.diseaselist{
+   
+    background-color: rgb(185, 204, 243);
+    display: grid;
+    margin: 10%;
+    padding: 1%;
+    border-radius: 4px;
+}
+#btn1{
+    padding:0.8%;
+    
+    border-radius: 2px;
+    background-color: rgb(141, 80, 255);;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}

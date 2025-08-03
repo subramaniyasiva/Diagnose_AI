@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+    <head>
+        <title>Stroke Prediction</title>
+        <link rel="stylesheet" href="{% static 'diabetics.css' %}">
+    </head>
+    <body>
+        <h1>Stroke Prediction</h1>
+        <hr>
+      <form method="POST">
+    {% csrf_token %}
+    Patient Name : <input type="text" name="pname"><br><Br>
+    Gender: <input type="text" name="gender"><br><Br>
+    Age: <input type="number" name="age"><br><br>
+    Hypertension: <input type="number" name="hypertension"><br><br>
+    Heart Disease: <input type="number" name="heart_disease"><br><Br>
+    Ever Married: <input type="text" name="ever_married"><br><br>
+    Work Type: <input type="text" name="work_type"><br><br>
+    Residence Type: <input type="text" name="Residence_type"><br><Br>
+    Avg Glucose Level: <input type="number" step="0.01" name="avg_glucose_level"><br><br>
+    BMI: <input type="number" step="0.1" name="bmi"><br><Br>
+    Smoking Status: <input type="text" name="smoking_status"><br><br>
+    <input type="submit" value="Predict For Stroke" id="btn1">
+</form>
+
+        {% if result %}
+        <script>
+            alert("{{result}}")
+        </script>
+        {% endif %}
+        
+    </body>
+    </html>
+ 

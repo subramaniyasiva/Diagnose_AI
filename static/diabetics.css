@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(155, 0, 0); */
+    padding: 2,4%;
+    
+}
+form{
+    padding:2.8%;
+     
+   
+    padding: 1%;
+    border-radius: 4px;
+  
+    background-color: rgb(185, 204, 243);
+}
+#btn1{
+    padding:0.8%;
+    
+    border-radius: 2px;
+    background-color: rgb(141, 80, 255);;
+}
+#btn1{
+    padding:0.8%;
+    
+    border-radius: 2px;
+    background-color: rgb(141, 80, 255);;
+}

@@ -1,0 +1,66 @@
+{% load  static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'cardiac.css' %}">
+
+</head>
+<body>
+    <h1>Fill The Form For The Results</h1><Br>
+        
+    <form method="POST">
+        {% csrf_token %}
+        <label>Name: </label>
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+
+        <label>AGE: </label>
+        <input type="number" name="age" placeholder="Enter the age" max="100" required><br><br>
+        <label>SEX: </label>
+        <input type="text" name="sex" required><br><br>
+
+        <label>Chest Pain Type:</label><br><br>
+        <label>ATA:</label>
+        <input type="radio" name="chest_pain" value="ATA" required>
+        <label>NAP:</label>
+        <input type="radio" name="chest_pain" value="NAP">
+        <label>ASY:</label>
+        <input type="radio" name="chest_pain" value="ASY">
+        <label>TA:</label>
+        <input type="radio" name="chest_pain" value="TA"><br><br>
+
+        
+        <label>Resting BP: </label>
+        <input type="Number" name="resting_bp" required><br><Br>
+
+        <label>Cholesterol: </label>
+        <input type="number" name="cholesterol" required><br><br>
+
+        <label>Fasting BS: </label>
+        <input type="number" name="fasting_bs" required><br><br>
+
+        <label>Resting ECG: </label>
+        <input type="text" name="resting_ecg" required><br><Br>
+
+        <label>Max HR: </label>
+        <input type="number" name="max_hr" required><br><br>
+
+        <label>Exercise Angina: </label>
+        <input type="radio" name="exercise_angina" value="Y" required> Yes
+        <input type="radio" name="exercise_angina" value="N"> No<br><Br>
+
+        <label>Oldpeak: </label>
+        <input type="number" name="oldpeak" required><br><br>
+
+        <label>ST Slope: </label>
+        <input type="text" name="st_slope" required><br><br>
+
+        <input type="submit" value="Check the Result"id="btn1">
+    </form>
+    {% if message %}
+<script>
+alert("{{message}}")
+</script>
+{% endif %}
+
+
+</body>
+</html>

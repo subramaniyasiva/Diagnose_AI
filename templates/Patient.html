@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+    <head>
+        <title>Patient Registration</title>
+    </head>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <body>
+        <h1>Patient Registration</h1>
+        <Br><hr>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="Patient Name">Patient's Name :</label>
+            <input type="text" name="pname"><br><br>
+            <label for="Age">Age :</label>
+            <input type="Number" name="Age"><br><br>
+            <label for="Gender">Gender :</label>
+            <select name="gender" id="cars">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+           </select><Br><br>
+
+
+            <label for="mail">Mail ID :</label>
+            <input type="mail" name="mail"><br><br>
+            <label for="city">City :</label>
+            <input type="text" name="city"><br><br>
+            <label for="Address">Address :</label>
+            <input type="text" name="Address"><br><br>
+            <label for="MobileNumber">Mobile Number :</label>
+            <input type="Number" name="MobileNumber"><br><br>
+            <button type="submit" name="psubmit" id="btn1">Register Patient</button><br><br>
+           
+        </form><br>
+            <hr>
+
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
