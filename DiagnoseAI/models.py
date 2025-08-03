@@ -5,7 +5,7 @@ from django.utils import timezone
 class patient_detials(models.Model):
     Patient_name=models.CharField(max_length=50)
     Age=models.IntegerField()
-    Gender=models.CharField(max_length=7)
+    Gender=models.CharField(max_length=8)
     mail=models.EmailField()
     city=models.CharField(max_length=35)
     Address=models.CharField(max_length=60)
