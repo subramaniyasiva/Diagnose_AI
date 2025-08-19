@@ -1,17 +1,33 @@
-.diseaselist{
-   
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.diseaselist {
     background-color: rgb(185, 204, 243);
     display: grid;
-    margin: 10%;
-    padding: 1%;
-    border-radius: 4px;
+    gap: 1rem; /* spacing between items */
+    margin: 5% auto; /* center with auto */
+    padding: 2%;
+    border-radius: 8px;
+    max-width: 600px; /* prevent stretching */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-#btn1{
-    padding:0.8%;
-    
-    border-radius: 2px;
-    background-color: rgb(141, 80, 255);;
+
+#btn1 {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(141, 80, 255);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
-body{
-    background-color: rgb(255, 255, 255);
+
+#btn1:hover {
+    background-color: rgb(120, 60, 230);
+    transform: scale(1.05);
 }

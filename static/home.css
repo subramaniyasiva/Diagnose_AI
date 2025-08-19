@@ -1,18 +1,31 @@
-body{
-    background-color: rgb(255, 255, 255);
-    
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-form{
-    padding:0.8%;
-     
-   
-    padding: 1%;
-    border-radius: 4px;
-  
-    background-color: rgb(185, 204, 243);}
-#btn1{
-    padding:0.8%;
-    
-    border-radius: 2px;
-    background-color: rgb(141, 80, 255);;
+
+form {
+    background-color: rgb(185, 204, 243);
+    padding: 2%;
+    margin: 5% auto;
+    border-radius: 8px;
+    max-width: 500px;  /* keeps it neat */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#btn1 {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(141, 80, 255);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#btn1:hover {
+    background-color: rgb(120, 60, 230);
+    transform: scale(1.05);
 }
