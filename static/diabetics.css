@@ -1,27 +1,61 @@
-body{
-    background-color: rgb(255, 255, 255);
-    /* background-color: rgb(155, 0, 0); */
-    padding: 2,4%;
-    
+/* Reset a bit for clean look */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9faff; /* soft white with slight blue tone */
+    padding: 2%;
+    color: #333;
 }
-form{
-    padding:2.8%;
-     
-   
-    padding: 1%;
+
+/* Center the form */
+form {
+    max-width: 400px;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background: #e6edfb; /* light blue background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input styling */
+form input, 
+form select, 
+form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
-  
-    background-color: rgb(185, 204, 243);
+    font-size: 1rem;
 }
-#btn1{
-    padding:0.8%;
-    
-    border-radius: 2px;
-    background-color: rgb(141, 80, 255);;
+
+/* Button styling */
+#btn1 {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #8d50ff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
-#btn1{
-    padding:0.8%;
-    
-    border-radius: 2px;
-    background-color: rgb(141, 80, 255);;
+
+/* Hover + click effect */
+#btn1:hover {
+    background-color: #6d36d6;
+    transform: translateY(-2px);
+}
+
+#btn1:active {
+    transform: translateY(1px);
+}
+
+/* Headings inside form */
+form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4a4a4a;
 }

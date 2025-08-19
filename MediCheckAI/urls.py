@@ -25,7 +25,9 @@ urlpatterns = [
     path('cardiac',views.cardiac,name="cardiac"),
     path('diabeticss',views.diabeticss,name="diabetics"),
     path('stroke',views.predict_stroke,name="stroke"),
-    path('anemia',views.anemia,name='anemia')
+    path('anemia',views.anemia,name='anemia'),
+    path('liver',views.livers,name='livers')
+    
     
 
 ]

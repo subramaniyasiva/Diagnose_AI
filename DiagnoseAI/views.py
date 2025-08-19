@@ -11,12 +11,15 @@ MODEL_PATH = os.path.join(settings.BASE_DIR, 'DiagnoseAI', 'trainedmodels', 'car
 MODEL_PATHd = os.path.join(settings.BASE_DIR, 'DiagnoseAI', 'trainedmodels', 'diabetes.joblib')
 MODEL_PATHs = os.path.join(settings.BASE_DIR, 'DiagnoseAI', 'trainedmodels', 'stroke_pipeline.pkl')
 model_patha=os.path.join(settings.BASE_DIR, 'DiagnoseAI', 'trainedmodels', 'anemia.pkl')
+model_pathl=os.path.join(settings.BASE_DIR, 'DiagnoseAI', 'trainedmodels', 'liver_rfmodel.pkl')
+
 
 
 modelc=joblib.load(MODEL_PATH)
 modeldd=joblib.load(MODEL_PATHd)
 models1=joblib.load(MODEL_PATHs)
 modela=joblib.load(model_patha)
+modell=joblib.load(model_pathl)
 
 def patient(requests):
     if requests.method=="POST":
@@ -252,4 +255,46 @@ def anemia(requests):
         obj3.save()
         return render(requests,'anemia.html',{'anemia_result':anemia_result})
     return render(requests,'anemia.html')
+def livers(requests):
+    if requests.method=='POST':
+        pname=requests.POST.get('pname')
+        age=requests.POST.get('age')
+        gender=requests.POST.get('gender')
+        tb=requests.POST.get('tb')
+        db=requests.POST.get('db')
+        ap=requests.POST.get('ap')
+        aa=requests.POST.get('aa')
+        asa=requests.POST.get('asa')
+        tp=requests.POST.get('tp')
+        al=requests.POST.get('al')
+        alg=requests.POST.get('alg')
+        print(alg)
+        features = pd.DataFrame({
+            'Age': [age],
+            'Gender': [gender],
+            'Total_Bilirubin': [tb],
+            'Direct_Bilirubin': [db],
+            'Alkaline_Phosphotase': [ap],
+            'Alamine_Aminotransferase': [aa],
+            'Aspartate_Aminotransferase': [asa],
+            'Total_Protiens': [tp],
+            'Albumin': [al],
+            'Albumin_and_Globulin_Ratio': [alg]
+            
+        })
+        liver_di=modell.predict(features)
+        liver_result="liver disease traces are there" if liver_di==2 else "no traces"
+        print(liver_di)        
+        print(liver_result)
+        
+        return render(requests,'liver.html',{'lr':liver_result})
+    return render(requests,'liver.html')
     
+        
+        
+        
+        
+        
+        
+        
+        

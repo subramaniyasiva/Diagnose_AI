@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+    <head>
+        <title>Liver Disease</title>
+        <link rel="stylesheet" href="{% static 'diabetics.css' %}">
+    </head>
+    <body>
+        <h1>Liver Disease Prediction</h1><Br><br>
+            <hr>
+        <form method='POST'>
+            {% csrf_token %}
+             Patient Name : <input type="text" name="pname"><br><Br>
+    Age: <input type="number" name="age"><br><Br>
+   <label>Gender: </label>
+            <select name="gender">
+                <option value=1>Male</option>
+                <option value=0>Female</option>
+            </select>
+    Total_Bilirubin: <input type="decimal" name="tb"><br><br>
+    Direct_Bilirubin: <input type="decimal" name="db"><br><Br>
+    Alkaline_Phosphotase: <input type="decimal" name="ap"><br><br>
+    Alamine_Aminotransferase: <input type="decimal" name="aa"><br><br>
+    Aspartate_Aminotransferase: <input type="decimal" name="asa"><br><Br>
+    Total_Protiens: <input type="decimal" step="0.01" name="tp"><br><br>
+    Albumin: <input type="decimal" step="0.1" name="al"><br><Br>
+    Albumin_and_Globulin_Ratio: <input type="decimal" name="alg"><br><br>
+   
+
+    <input type="submit" value="Predict For liver" id="btn1">
+</form>
+    </body>
+    {% if lr %}
+    <script>
+        alert("{{lr}}")
+    </script>
+    {% endif %}
+    </html>
+
