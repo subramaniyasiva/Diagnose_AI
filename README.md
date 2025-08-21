@@ -1,34 +1,42 @@
-🔹 Description:
-This web-based application, built with Django, is designed to streamline patient registration and provide early risk predictions for multiple health conditions using machine learning models. Patients can be registered through a simple interface, and their health parameters are used to assess the likelihood of anemia, diabetes, cardiac arrest, and stroke. The application helps healthcare providers or system users make informed decisions with the support of data-driven insights.
+🏥 MediCheckAI – Patient Registration & Disease Risk Prediction System
+🔹 Description
 
-🔹 Key Features:
-Patient Registration: A centralized form to register patient details including name, age, gender, and medical history.
+MediCheckAI is a web-based application built with Django that streamlines patient registration and provides early risk predictions for multiple health conditions using machine learning models. Healthcare providers can register patients through a simple interface and instantly receive predictive insights on conditions such as anemia, diabetes, cardiac arrest, liver failure, and stroke. This system supports data-driven decision-making and enhances preventive healthcare.
+
+🔹 Key Features
+
+Patient Registration: Centralized form to capture details (name, age, gender, medical history).
 
 Disease Prediction Modules:
 
-Anemia Prediction: Based on parameters like Hemoglobin, MCH, MCHC, and MCV.
+Anemia → Hemoglobin, MCH, MCHC, MCV
 
-Diabetes Prediction: Uses Glucose, BMI, Insulin, and other key factors.
+Diabetes → Glucose, BMI, Insulin, etc.
 
-Cardiac Arrest Prediction: Analyzes data like chest pain type, cholesterol, and heart rate.
+Cardiac Arrest → Chest pain type, cholesterol, heart rate
 
-Stroke Prediction: Involves parameters such as hypertension, smoking status, and heart disease.
+Liver Failure → Liver enzyme levels, bilirubin, protein values
 
-Machine Learning Integration: Each prediction module is backed by a trained ML model, providing real-time results based on input data.
+Stroke → Hypertension, smoking status, heart disease
 
-Unified Patient Reference: A common name field connects all predictions to a specific patient record.
+Machine Learning Integration: Each module powered by a trained ML model (Random Forest, Decision Tree, KNN, XGBoost, LightGBM tested; best-performing model deployed).
 
-Result Display: Visual output or classification (e.g., “High Risk”, “Low Risk”) for each condition after submission.
+Unified Patient Reference: All predictions tied to a single patient record.
 
-Admin Panel: Django admin is used for managing patient records and viewing prediction outcomes.
+Result Display: Clear output classification (“High Risk”, “Low Risk”) with visual indicators.
 
-🔹 Tech Stack:
+Admin Panel: Manage patient data and review prediction outcomes via Django Admin.
+
+🔹 Tech Stack
+
 Backend: Python, Django
 
-Frontend: HTML, CSS, Bootstrap (optional for UI)
+Frontend: HTML, CSS, Bootstrap
 
-Database: SQLite
+Database: SQLite (extendable to PostgreSQL/MySQL)
 
-Machine Learning: Scikit-learn (for loading pre-trained models via joblib or pickle)
+ML Libraries: Pandas, NumPy, Seaborn, Scikit-learn, LabelEncoder, StandardScaler
 
-Tools: Django Admin, Django ORM
+ML Algorithms Tested: Random Forest, Decision Tree, KNN, XGBoost, LightGBM, etc. → evaluated using accuracy & classification report
+
+Deployment Tools: Django ORM, joblib/pickle for loading models
