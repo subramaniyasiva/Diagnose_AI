@@ -1,4 +1,5 @@
 🏥 MediCheckAI – Patient Registration & Disease Risk Prediction System
+
 🔹 Description
 
 MediCheckAI is a web-based application built with Django that streamlines patient registration and provides early risk predictions for multiple health conditions using machine learning models. Healthcare providers can register patients through a simple interface and instantly receive predictive insights on conditions such as anemia, diabetes, cardiac arrest, liver failure, and stroke. This system supports data-driven decision-making and enhances preventive healthcare.
